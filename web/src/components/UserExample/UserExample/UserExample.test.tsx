@@ -1,15 +1,15 @@
 import { render } from '@redwoodjs/testing/web'
 
-import ${pascalName} from './${pascalName}'
-import { standard } from './${pascalName}.mock'
+import UserExample from './UserExample'
+import { standard } from './UserExample.mock'
 
 //   Improve this test with help from the Redwood Testing Doc:
 //    https://redwoodjs.com/docs/testing#testing-components
 
-describe('${pascalName}', () => {
+describe('UserExample', () => {
   it('renders successfully', () => {
     expect(() => {
-      render(<${pascalName} ${camelName}={standard().${camelName}} />)
+      render(<UserExample userExample={standard().userExample} />)
     }).not.toThrow()
   })
 })

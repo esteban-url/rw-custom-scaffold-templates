@@ -33,10 +33,20 @@ describe('userExamples', () => {
 
   scenario('creates a userExample', async () => {
     const result = await createUserExample({
-      input: { email: 'String6657701' },
+      input: {
+        email: 'String6967973',
+        date: '2024-12-30T22:49:44.202Z',
+        active: true,
+        floaty: 475372.9135774232,
+        inty: 8318459,
+      },
     })
 
-    expect(result.email).toEqual('String6657701')
+    expect(result.email).toEqual('String6967973')
+    expect(result.date).toEqual(new Date('2024-12-30T22:49:44.202Z'))
+    expect(result.active).toEqual(true)
+    expect(result.floaty).toEqual(475372.9135774232)
+    expect(result.inty).toEqual(8318459)
   })
 
   scenario('updates a userExample', async (scenario: StandardScenario) => {
@@ -45,10 +55,10 @@ describe('userExamples', () => {
     })) as UserExample
     const result = await updateUserExample({
       id: original.id,
-      input: { email: 'String69881032' },
+      input: { email: 'String26842272' },
     })
 
-    expect(result.email).toEqual('String69881032')
+    expect(result.email).toEqual('String26842272')
   })
 
   scenario('deletes a userExample', async (scenario: StandardScenario) => {

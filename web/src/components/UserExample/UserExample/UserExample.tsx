@@ -9,7 +9,7 @@ import { useMutation } from '@redwoodjs/web'
 import type { TypedDocumentNode } from '@redwoodjs/web'
 import { toast } from '@redwoodjs/web/toast'
 
-import {} from 'src/lib/formatters'
+import { checkboxInputTag, timeTag } from 'src/lib/formatters'
 
 const DELETE_USER_EXAMPLE_MUTATION: TypedDocumentNode<
   DeleteUserExampleMutation,
@@ -64,6 +64,22 @@ const UserExample = ({ userExample }: Props) => {
             <tr>
               <th>Name</th>
               <td>{userExample.name}</td>
+            </tr>
+            <tr>
+              <th>Date</th>
+              <td>{timeTag(userExample.date)}</td>
+            </tr>
+            <tr>
+              <th>Active</th>
+              <td>{checkboxInputTag(userExample.active)}</td>
+            </tr>
+            <tr>
+              <th>Floaty</th>
+              <td>{userExample.floaty}</td>
+            </tr>
+            <tr>
+              <th>Inty</th>
+              <td>{userExample.inty}</td>
             </tr>
           </tbody>
         </table>

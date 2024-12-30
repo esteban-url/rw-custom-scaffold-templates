@@ -12,15 +12,15 @@
 
 import type { Meta, StoryObj } from '@storybook/react'
 
-import ${pascalName} from './${pascalName}'
+import UserExampleForm from './UserExampleForm'
 
-const meta: Meta<typeof ${pascalName}> = {
-  component: ${pascalName},
-  tags: ['autodocs']
+const meta: Meta<typeof UserExampleForm> = {
+  component: UserExampleForm,
+  tags: ['autodocs'],
 }
 
 export default meta
 
-type Story = StoryObj<typeof ${pascalName}>
+type Story = StoryObj<typeof UserExampleForm>
 
 export const Primary: Story = {}

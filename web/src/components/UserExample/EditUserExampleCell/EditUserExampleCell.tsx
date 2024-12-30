@@ -21,6 +21,10 @@ export const QUERY: TypedDocumentNode<EditUserExampleById> = gql`
       id
       email
       name
+      date
+      active
+      floaty
+      inty
     }
   }
 `
@@ -37,6 +41,10 @@ const UPDATE_USER_EXAMPLE_MUTATION: TypedDocumentNode<
       id
       email
       name
+      date
+      active
+      floaty
+      inty
     }
   }
 `

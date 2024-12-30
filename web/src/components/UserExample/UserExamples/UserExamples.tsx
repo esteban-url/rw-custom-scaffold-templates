@@ -10,7 +10,7 @@ import type { TypedDocumentNode } from '@redwoodjs/web'
 import { toast } from '@redwoodjs/web/toast'
 
 import { QUERY } from 'src/components/UserExample/UserExamplesCell'
-import { truncate } from 'src/lib/formatters'
+import { checkboxInputTag, timeTag, truncate } from 'src/lib/formatters'
 
 const DELETE_USER_EXAMPLE_MUTATION: TypedDocumentNode<
   DeleteUserExampleMutation,
@@ -52,6 +52,10 @@ const UserExamplesList = ({ userExamples }: FindUserExamples) => {
             <th>Id</th>
             <th>Email</th>
             <th>Name</th>
+            <th>Date</th>
+            <th>Active</th>
+            <th>Floaty</th>
+            <th>Inty</th>
             <th>&nbsp;</th>
           </tr>
         </thead>
@@ -61,6 +65,10 @@ const UserExamplesList = ({ userExamples }: FindUserExamples) => {
               <td>{truncate(userExample.id)}</td>
               <td>{truncate(userExample.email)}</td>
               <td>{truncate(userExample.name)}</td>
+              <td>{timeTag(userExample.date)}</td>
+              <td>{checkboxInputTag(userExample.active)}</td>
+              <td>{truncate(userExample.floaty)}</td>
+              <td>{truncate(userExample.inty)}</td>
               <td>
                 <nav className="rw-table-actions">
                   <Link

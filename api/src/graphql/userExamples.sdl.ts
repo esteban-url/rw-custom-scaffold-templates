@@ -3,6 +3,10 @@ export const schema = gql`
     id: Int!
     email: String!
     name: String
+    date: DateTime!
+    active: Boolean!
+    floaty: Float!
+    inty: Int!
   }
 
   type Query {
@@ -13,11 +17,19 @@ export const schema = gql`
   input CreateUserExampleInput {
     email: String!
     name: String
+    date: DateTime!
+    active: Boolean!
+    floaty: Float!
+    inty: Int!
   }
 
   input UpdateUserExampleInput {
     email: String
     name: String
+    date: DateTime
+    active: Boolean
+    floaty: Float
+    inty: Int
   }
 
   type Mutation {

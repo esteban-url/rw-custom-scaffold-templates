@@ -20,6 +20,10 @@ export const QUERY: TypedDocumentNode<
       id
       email
       name
+      date
+      active
+      floaty
+      inty
     }
   }
 `

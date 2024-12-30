@@ -1,14 +1,14 @@
 import { render } from '@redwoodjs/testing/web'
 
-import ${pascalName}Page from './${pascalName}Page'
+import UserExamplePage from './UserExamplePage'
 
 //   Improve this test with help from the Redwood Testing Doc:
 //   https://redwoodjs.com/docs/testing#testing-pages-layouts
 
-describe('${pascalName}Page', () => {
+describe('UserExamplePage', () => {
   it('renders successfully', () => {
     expect(() => {
-      render(<${pascalName}Page ${idName}="42" />)
+      render(<UserExamplePage id="42" />)
     }).not.toThrow()
   })
 })
